@@ -2,6 +2,7 @@ site_name: envas ヘルプサイト
 site_description: WEB 席次表 envas ヘルプサイトです。
 site_author: envas
 site_url: https://help.envas.jp/
+copyright: "&copy; 2025 WISH LLC. All rights reserved."
 
 theme:
   name: material
