@@ -21,3 +21,6 @@ extra_css:
 plugins:
   search:
     lang: "ja"
+
+extra:
+  generator: false
