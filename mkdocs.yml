@@ -6,4 +6,4 @@ site_url: https://help.envas.jp/
 theme:
   name: material
   logo: images/envas.webp
-  favicon: images/favicon.png
+  favicon: images/favicon.ico
