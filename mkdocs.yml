@@ -5,6 +5,6 @@ site_url: https://help.envas.jp/
 
 theme:
   name: material
-  logo: images/envas.webp
+  logo: images/envas.png
   favicon: images/favicon.ico
   language: ja
