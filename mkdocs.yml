@@ -1,0 +1,9 @@
+site_name: envas ヘルプサイト
+site_description: WEB 席次表 envas ヘルプサイトです。
+site_author: envas
+site_url: https://help.envas.jp/
+
+theme:
+  name: material
+  logo: images/envas.webp
+  favicon: images/favicon.png
