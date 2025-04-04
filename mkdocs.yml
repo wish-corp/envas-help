@@ -24,3 +24,6 @@ plugins:
 
 extra:
   generator: false
+
+markdown_extensions:
+  - nl2br
