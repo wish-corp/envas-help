@@ -11,6 +11,8 @@ theme:
   palette:
     scheme: default
     primary: custom
+  features:
+    - navigation.top
 
 extra_css:
   - stylesheets/extra.css
