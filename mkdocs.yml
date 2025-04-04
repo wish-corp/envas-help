@@ -8,3 +8,9 @@ theme:
   logo: images/envas.png
   favicon: images/favicon.ico
   language: ja
+  palette:
+    scheme: default
+    primary: custom
+
+extra_css:
+  - stylesheets/extra.css
