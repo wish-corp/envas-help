@@ -1,0 +1,22 @@
+name: Deploy envas help site
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0  # 全履歴を取得
+
+      - name: Deploy envas help site
+        run: |
+          docker run --rm -v ${PWD}:/docs squidfunk/mkdocs-material gh-deploy --force
