@@ -1,4 +1,5 @@
 # envas-help
+![envas-help-deploy-status](https://github.com/wish-corp/envas-help/actions/workflows/deploy.yml/badge.svg)
 
 WEB 席次表 envas のヘルプサイト
 
