@@ -2,6 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://help.envas.jp/</loc>
-         <lastmod>2025-04-04</lastmod>
+         <lastmod>2025-05-22</lastmod>
+    </url>
+    <url>
+         <loc>https://help.envas.jp/faq/</loc>
+         <lastmod>2025-05-22</lastmod>
     </url>
 </urlset>
