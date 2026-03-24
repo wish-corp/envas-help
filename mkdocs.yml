@@ -27,3 +27,4 @@ extra:
 
 markdown_extensions:
   - nl2br
+  - admonition
