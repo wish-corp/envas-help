@@ -12,4 +12,4 @@ WEB 席次表 envas のヘルプサイト
 docker compose up -d
 ```
 
-http://localhost:8000
+http://localhost:8101
