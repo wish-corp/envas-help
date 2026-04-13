@@ -1,6 +1,6 @@
 services:
   help-site:
-    build: .
+    image: zensical/zensical
     ports:
       - "8101:8000"
     volumes:
