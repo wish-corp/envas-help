@@ -2,7 +2,7 @@ site_name: envas（エンバス） ヘルプサイト
 site_description: WEB 席次表 envas（エンバス） ヘルプサイトです。
 site_author: envas
 site_url: https://help.envas.jp/
-copyright: \"&copy; 2025 WISH LLC. All rights reserved.\"
+copyright: "&copy; 2025 WISH LLC. All rights reserved."
 
 theme:
   name: material
@@ -20,7 +20,7 @@ extra_css:
 
 plugins:
   search:
-    lang: \"ja\"
+    lang: "ja"
 
 extra:
   generator: false
@@ -37,4 +37,5 @@ nav:
   - 公開・非公開の管理: publish.md
   - フォトギャラリー: photo-gallery.md
   - 二次会の設定: after-party.md
+  - 取引履歴: transaction-history.md
   - よくあるご質問: faq.md
