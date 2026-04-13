@@ -1,6 +1,6 @@
 services:
   help-site:
-    image: squidfunk/mkdocs-material:9.6.20
+    build: .
     ports:
       - "8101:8000"
     volumes:
