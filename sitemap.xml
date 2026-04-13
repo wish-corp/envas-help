@@ -2,30 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://help.envas.jp/</loc>
-         <lastmod>2026-04-05</lastmod>
+         <lastmod>2026-04-13</lastmod>
     </url>
     <url>
          <loc>https://help.envas.jp/after-party/</loc>
-         <lastmod>2026-04-05</lastmod>
+         <lastmod>2026-04-13</lastmod>
     </url>
     <url>
          <loc>https://help.envas.jp/faq/</loc>
-         <lastmod>2026-04-05</lastmod>
+         <lastmod>2026-04-13</lastmod>
     </url>
     <url>
          <loc>https://help.envas.jp/guest/</loc>
-         <lastmod>2026-04-05</lastmod>
+         <lastmod>2026-04-13</lastmod>
     </url>
     <url>
          <loc>https://help.envas.jp/photo-gallery/</loc>
-         <lastmod>2026-04-05</lastmod>
+         <lastmod>2026-04-13</lastmod>
     </url>
     <url>
          <loc>https://help.envas.jp/publish/</loc>
-         <lastmod>2026-04-05</lastmod>
+         <lastmod>2026-04-13</lastmod>
     </url>
     <url>
          <loc>https://help.envas.jp/seating-chart/</loc>
-         <lastmod>2026-04-05</lastmod>
+         <lastmod>2026-04-13</lastmod>
+    </url>
+    <url>
+         <loc>https://help.envas.jp/transaction-history/</loc>
+         <lastmod>2026-04-13</lastmod>
     </url>
 </urlset>
