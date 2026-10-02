@@ -1,0 +1,26 @@
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: monthly
+    # 公開直後に乗っ取られた版を避けるため、公開から 1 週間たった版だけを更新対象にする
+    # （npm のサプライチェーン攻撃は公開から数日以内に検知・削除される例が多い）
+    cooldown:
+      default-days: 7
+    groups:
+      astro:
+        patterns:
+          - astro
+          - "@astrojs/*"
+    ignore:
+      # @astrojs/check が TypeScript 5 / 6 にしか対応しておらず、7 に上げると npm ci が落ちる
+      - dependency-name: typescript
+        update-types: ["version-update:semver-major"]
+      # .nvmrc の Node.js 24 に型を合わせる
+      - dependency-name: "@types/node"
+        update-types: ["version-update:semver-major"]
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly
