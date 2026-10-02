@@ -1,11 +1,9 @@
-# 席次表の使い方
-
-席次表エディタでは、テーブルの配置やゲストの配席をかんたんに行えます。
-ゲストの追加・編集・削除については[ゲストの管理](guest.md)をご覧ください。
-
+---
+title: "席次表の使い方"
 ---
 
-[TOC]
+席次表エディタでは、テーブルの配置やゲストの配席をかんたんに行えます。
+ゲストの追加・編集・削除については[ゲストの管理](/guest/)をご覧ください。
 
 ---
 
@@ -39,7 +37,7 @@
 - **テーブル名**（例：A、B、松、竹）
 - **形状**: 円形 または 正方形
 
-<video src="/movies/add-table.mp4" type="video/mp4" controls></video>
+::video{src="/movies/add-table.mp4"}
 
 ### テーブル形状の種類 {#table-shapes}
 
@@ -54,7 +52,7 @@
 2. メニューから「テーブルを編集」を選択します
 3. テーブル名や形状を変更できます
 
-<video src="/movies/edit-table.mp4" type="video/mp4" controls></video>
+::video{src="/movies/edit-table.mp4"}
 
 ### テーブルを削除する {#delete-table}
 
@@ -68,7 +66,7 @@
 
 席次表エディタでは「タップして選択 → タップして配置」の操作で、ゲストを席に配置します。
 
-<video src="/movies/edit-seat.mp4" type="video/mp4" controls></video>
+::video{src="/movies/edit-seat.mp4"}
 
 ### 未配席のゲストを配置する {#assign-unassigned}
 

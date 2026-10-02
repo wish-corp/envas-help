@@ -1,0 +1,17 @@
+export const NAV: readonly string[] = [
+  'index',
+  'guest',
+  'seating-chart',
+  'profile-book-themes',
+  'publish',
+  'photo-gallery',
+  'seating-chart-image',
+  'after-party',
+  'transaction-history',
+  'wedding-members',
+  'withdrawal',
+  'storage-period',
+  'storage-extension',
+  'seating-chart-publish',
+  'faq',
+];
