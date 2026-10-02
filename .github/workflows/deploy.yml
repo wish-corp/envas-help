@@ -4,19 +4,60 @@ on:
   push:
     branches:
       - main
+  pull_request:
 
 permissions:
-  contents: write
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
-          fetch-depth: 0  # 全履歴を取得
+          persist-credentials: false
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - run: npm run check
+      - run: npm run build
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: site
+          path: dist
+          include-hidden-files: true
+          if-no-files-found: error
 
-      - name: Deploy envas help site
+  deploy:
+    needs: build
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+        with:
+          name: site
+          path: ${{ runner.temp }}/site
+      - name: Push to gh-pages
+        env:
+          SITE_DIR: ${{ runner.temp }}/site
         run: |
-          docker run --rm -v ${PWD}:/docs squidfunk/mkdocs-material gh-deploy --force
+          test -f "$SITE_DIR/.nojekyll"
+          test "$(cat "$SITE_DIR/CNAME")" = help.envas.jp
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout --orphan gh-pages-deploy
+          git rm -r -f --quiet .
+          git clean -f -d -x --quiet
+          cp -a "$SITE_DIR"/. .
+          git add -A
+          git commit --quiet -m "deploy: ${GITHUB_SHA}"
+          git push --force origin HEAD:gh-pages
