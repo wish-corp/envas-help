@@ -1,0 +1,131 @@
+---
+---
+<header class="site-header">
+  <div class="inner">
+    <a class="brand" href="/">
+      <img src="/images/envas.png" alt="" width="40" height="40" />
+      <span class="brand-text">
+        <span class="brand-name">envas</span>
+        <span class="brand-sub">ヘルプ</span>
+      </span>
+    </a>
+    <nav aria-label="サイト">
+      <div class="nav-links">
+        <a href="/">ヘルプ一覧</a>
+        <a href="https://info.envas.jp/">お知らせ</a>
+        <a href="https://envas.jp/">envas 公式サイト</a>
+      </div>
+      <form class="search" role="search" action="/search/" method="get">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6E645A" stroke-width="1.6" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4-4"></path></svg>
+        <label for="site-search" class="sr">ヘルプを検索</label>
+        <input id="site-search" name="q" type="search" placeholder="ヘルプを検索" />
+      </form>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    border-bottom: 1px solid var(--color-border);
+  }
+  .inner {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 32px;
+    height: 84px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    text-decoration: none;
+    color: var(--color-text);
+  }
+  .brand img {
+    width: 40px;
+    height: 40px;
+    mix-blend-mode: multiply;
+  }
+  .brand-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+  }
+  .brand-name {
+    font-family: var(--font-en);
+    font-size: 28px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+  }
+  .brand-sub {
+    font-size: 11px;
+    letter-spacing: 0.32em;
+    color: var(--color-text-sub);
+  }
+  nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+  }
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    font-size: 14px;
+    letter-spacing: 0.08em;
+  }
+  .nav-links a {
+    color: var(--color-text);
+    text-decoration: none;
+  }
+  .search {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    height: 44px;
+    padding: 0 18px;
+    border: 1px solid var(--color-border);
+    border-radius: 999px;
+    background: var(--color-surface);
+  }
+  .search input {
+    border: none;
+    background: transparent;
+    outline: none;
+    font: inherit;
+    font-size: 13px;
+    width: 150px;
+    color: var(--color-text);
+  }
+  .search:focus-within {
+    outline: 2px solid var(--color-link);
+    outline-offset: 2px;
+  }
+  @media (max-width: 760px) {
+    .nav-links {
+      display: none;
+    }
+    .inner {
+      padding: 0 16px;
+      gap: 12px;
+    }
+    nav {
+      flex: 1;
+      min-width: 0;
+      gap: 8px;
+    }
+    .search {
+      flex: 1;
+      min-width: 0;
+      padding: 0 14px;
+    }
+    .search input {
+      width: 100%;
+      min-width: 0;
+    }
+  }
+</style>

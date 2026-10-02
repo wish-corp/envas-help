@@ -1,0 +1,59 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout title="ページが見つかりません" ogImagePath="/og/index.png" ogType="website">
+  <main class="not-found">
+    <p class="eyebrow">404</p>
+    <h1>ページが見つかりません</h1>
+    <div class="ornament" aria-hidden="true">
+      <span class="line"></span>
+      <svg width="9" height="9" viewBox="0 0 8 8"><path d="M4 0 8 4 4 8 0 4Z" fill="#E7A03C"></path></svg>
+      <span class="line"></span>
+    </div>
+    <a href="/">ヘルプ一覧へ戻る</a>
+  </main>
+</BaseLayout>
+
+<style>
+  .not-found {
+    padding: 104px 32px 80px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 22px;
+  }
+  .eyebrow {
+    margin: 0;
+    font-family: var(--font-en);
+    font-size: 15px;
+    letter-spacing: 0.42em;
+    color: var(--color-link);
+  }
+  h1 {
+    margin: 0;
+    font-family: var(--font-mincho);
+    font-weight: 500;
+    font-size: 36px;
+    letter-spacing: 0.12em;
+  }
+  .ornament {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .line {
+    width: 64px;
+    height: 1px;
+    background: var(--color-brand);
+  }
+  a {
+    font-size: 15px;
+    letter-spacing: 0.08em;
+  }
+  @media (max-width: 760px) {
+    h1 {
+      font-size: 28px;
+    }
+  }
+</style>

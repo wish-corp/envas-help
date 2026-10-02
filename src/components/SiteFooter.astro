@@ -1,0 +1,110 @@
+---
+import { COPYRIGHT } from '../consts';
+---
+<footer class="site-footer">
+  <div class="inner">
+    <div class="top">
+      <div class="brand">
+        <img src="/images/envas.png" alt="" width="48" height="48" />
+        <div class="brand-text">
+          <span class="brand-name">envas</span>
+          <span class="brand-sub">WEB 席次表 envas（エンバス）</span>
+        </div>
+      </div>
+      <nav aria-label="フッター">
+        <a href="https://envas.jp/">envas 公式サイト</a>
+        <a href="https://info.envas.jp/">お知らせ</a>
+      </nav>
+    </div>
+    <div class="bottom">
+      <div class="ornament" aria-hidden="true">
+        <span class="line"></span>
+        <svg width="7" height="7" viewBox="0 0 8 8"><path d="M4 0 8 4 4 8 0 4Z" fill="#E7A03C"></path></svg>
+        <span class="line"></span>
+      </div>
+      <p>{COPYRIGHT}</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    margin-top: 140px;
+    border-top: 1px solid var(--color-border);
+  }
+  .inner {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 64px 32px 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+  }
+  .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 32px;
+    flex-wrap: wrap;
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .brand img {
+    width: 48px;
+    height: 48px;
+    mix-blend-mode: multiply;
+  }
+  .brand-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .brand-name {
+    font-family: var(--font-en);
+    font-size: 26px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+  }
+  .brand-sub {
+    font-size: 12px;
+    color: var(--color-text-sub);
+    letter-spacing: 0.12em;
+  }
+  nav {
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+    font-size: 13px;
+    letter-spacing: 0.08em;
+  }
+  nav a {
+    color: var(--color-text);
+    text-decoration: none;
+  }
+  .bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+  }
+  .ornament {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .line {
+    width: 40px;
+    height: 1px;
+    background: var(--color-border);
+  }
+  p {
+    margin: 0;
+    font-family: var(--font-en);
+    font-size: 14px;
+    letter-spacing: 0.12em;
+    color: var(--color-text-sub);
+  }
+</style>

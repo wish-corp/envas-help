@@ -1,5 +1,7 @@
 .vscode
 .idea
-
-site
 .claude
+
+node_modules
+dist
+.astro

@@ -1,0 +1,282 @@
+:root {
+  --color-brand: #e7a03c;
+  --color-link: #96580a;
+  --color-link-hover: #6e3f05;
+  --color-text: #2a2420;
+  --color-text-prose: #3a332d;
+  --color-text-sub: #6e645a;
+  --color-border: #e6dccd;
+  --color-border-inner: #efe6d8;
+  --color-bg: #faf7f2;
+  --color-surface: #fffdf9;
+  --color-marker: #f7e2c0;
+  --color-callout-bg: #f5ede1;
+  --color-callout-border: #eadbc4;
+  --font-sans: 'Zen Kaku Gothic New', 'Hiragino Sans', sans-serif;
+  --font-mincho: 'Shippori Mincho', serif;
+  --font-en: 'Cormorant Garamond', serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+}
+
+a {
+  color: var(--color-link);
+}
+
+a:hover {
+  color: var(--color-link-hover);
+}
+
+.sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+input::placeholder {
+  color: #7a6f64;
+}
+
+/* Markdown の出力。Astro のスコープ付き CSS が効かないのでグローバルに置く */
+.prose {
+  font-size: 16px;
+  line-height: 2.1;
+  color: var(--color-text-prose);
+  letter-spacing: 0.03em;
+}
+
+.prose p {
+  margin: 0 0 1.6em;
+}
+
+.prose ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.8em;
+}
+
+.prose li {
+  position: relative;
+  padding-left: 1.7em;
+  margin-bottom: 0.8em;
+}
+
+.prose li::before {
+  content: '';
+  position: absolute;
+  left: 0.35em;
+  top: 0.82em;
+  width: 6px;
+  height: 6px;
+  background: var(--color-brand);
+  transform: rotate(45deg);
+}
+
+.prose ol {
+  list-style: none;
+  counter-reset: prose-ol;
+  padding: 0;
+  margin: 0 0 1.8em;
+}
+
+.prose ol > li {
+  counter-increment: prose-ol;
+}
+
+.prose ol > li::before {
+  content: counter(prose-ol, decimal-leading-zero);
+  top: 0;
+  left: 0;
+  width: auto;
+  height: auto;
+  background: none;
+  transform: none;
+  font-family: var(--font-en);
+  font-size: 0.9em;
+  color: var(--color-text-sub);
+}
+
+.prose ol > li {
+  padding-left: 2.4em;
+}
+
+.prose strong {
+  font-weight: 500;
+  background: linear-gradient(transparent 64%, var(--color-marker) 64%);
+}
+
+.prose h2 {
+  margin: 80px 0 28px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--color-border);
+  font-family: var(--font-mincho);
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 1.6;
+  letter-spacing: 0.06em;
+  color: var(--color-text);
+  scroll-margin-top: 32px;
+}
+
+.prose h3 {
+  margin: 56px 0 20px;
+  font-family: var(--font-mincho);
+  font-weight: 500;
+  font-size: 19px;
+  line-height: 1.7;
+  letter-spacing: 0.05em;
+  color: var(--color-text);
+  scroll-margin-top: 32px;
+}
+
+.prose a {
+  text-underline-offset: 0.2em;
+}
+
+.prose code {
+  padding: 0.1em 0.4em;
+  background: var(--color-callout-bg);
+  border: 1px solid var(--color-callout-border);
+  font-size: 0.9em;
+  letter-spacing: 0;
+}
+
+.prose table {
+  display: block;
+  overflow-x: auto;
+  width: 100%;
+  margin: 0 0 1.8em;
+  border-collapse: collapse;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.prose th,
+.prose td {
+  min-width: 8em;
+  padding: 12px 16px;
+  border: 1px solid var(--color-border);
+  text-align: left;
+  vertical-align: top;
+}
+
+.prose th {
+  background: var(--color-callout-bg);
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.prose p > img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  border: 1px solid var(--color-border);
+}
+
+.prose .callout {
+  margin: 0 0 1.6em;
+  padding: 28px 32px;
+  background: var(--color-callout-bg);
+  border: 1px solid var(--color-callout-border);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.prose .callout p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 2;
+}
+
+.prose .callout .callout-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-mincho);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 2.1;
+  letter-spacing: 0.06em;
+  color: var(--color-text);
+}
+
+.prose .callout .callout-title::before {
+  content: '';
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  background: var(--color-link);
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.6'%3E%3Ccircle cx='12' cy='12' r='9'/%3E%3Cpath d='M12 8v5'/%3E%3Ccircle cx='12' cy='16.5' r='0.6' fill='black'/%3E%3C/svg%3E")
+    center / contain no-repeat;
+}
+
+.prose figure.media {
+  margin: 48px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.prose figure.media iframe,
+.prose figure.media video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 1px solid var(--color-border);
+  background: #3a322b;
+}
+
+.prose figure.media figcaption {
+  text-align: center;
+  font-size: 13px;
+  line-height: 1.8;
+  color: var(--color-text-sub);
+  letter-spacing: 0.06em;
+}
+
+.prose a.anchor {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  margin-left: 12px;
+  vertical-align: middle;
+  color: #c9b79c;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.prose a.anchor::before {
+  content: '';
+  width: 16px;
+  height: 16px;
+  background: currentColor;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.6'%3E%3Cpath d='M10 14a4 4 0 0 0 5.66 0l3-3a4 4 0 0 0-5.66-5.66l-1 1'/%3E%3Cpath d='M14 10a4 4 0 0 0-5.66 0l-3 3a4 4 0 0 0 5.66 5.66l1-1'/%3E%3C/svg%3E")
+    center / contain no-repeat;
+}
+
+.prose :is(h2, h3):hover .anchor,
+.prose a.anchor:focus {
+  opacity: 1;
+}
+
+#search {
+  --pagefind-ui-primary: #96580a;
+  --pagefind-ui-text: #2a2420;
+  --pagefind-ui-background: #fffdf9;
+  --pagefind-ui-border: #e6dccd;
+  --pagefind-ui-tag: #f5ede1;
+  --pagefind-ui-font: var(--font-sans);
+}
