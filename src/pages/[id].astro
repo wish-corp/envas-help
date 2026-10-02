@@ -1,0 +1,163 @@
+---
+import { render } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import DocNav from '../components/DocNav.astro';
+import TableOfContents from '../components/TableOfContents.astro';
+import { getNavDocs, INDEX_ID, type DocEntry } from '../lib/docs';
+import { slugify, unique } from '../markdown/heading-ids';
+
+const TOC_DEPTH = 2;
+
+export async function getStaticPaths() {
+  const entries = await getNavDocs();
+  return entries
+    .filter((entry) => entry.id !== INDEX_ID)
+    .map((entry) => ({ params: { id: entry.id }, props: { entry, entries } }));
+}
+
+interface Props {
+  entry: DocEntry;
+  entries: DocEntry[];
+}
+
+const { entry, entries } = Astro.props;
+const { Content, headings } = await render(entry);
+const titleId = unique(slugify(entry.data.title), new Set());
+const tocItems = headings.filter((heading) => heading.depth === TOC_DEPTH);
+---
+<BaseLayout title={entry.data.title} ogImagePath={`/og/${entry.id}.png`} ogType="article">
+  <div class="layout">
+    <DocNav entries={entries} currentId={entry.id} />
+
+    <main>
+      <article data-pagefind-body>
+        <nav class="breadcrumb" aria-label="パンくず" data-pagefind-ignore>
+          <a href="/">ヘルプ</a>
+          <span aria-hidden="true">/</span>
+          <span>{entry.data.title}</span>
+        </nav>
+
+        <header class="article-header">
+          <h1 id={titleId} class="article-title">{entry.data.title}</h1>
+          <div class="ornament" aria-hidden="true">
+            <span class="line"></span>
+            <svg width="8" height="8" viewBox="0 0 8 8"><path d="M4 0 8 4 4 8 0 4Z" fill="#E7A03C"></path></svg>
+          </div>
+        </header>
+
+        {tocItems.length > 0 && (
+          <details class="toc-inline" data-pagefind-ignore>
+            <summary>目次</summary>
+            <ol>
+              {tocItems.map((item) => (
+                <li><a href={`#${item.slug}`}>{item.text}</a></li>
+              ))}
+            </ol>
+          </details>
+        )}
+
+        <div class="prose">
+          <Content />
+        </div>
+      </article>
+    </main>
+
+    <TableOfContents items={tocItems} />
+  </div>
+</BaseLayout>
+
+<style>
+  .layout {
+    max-width: 1360px;
+    margin: 0 auto;
+    padding: 72px 32px 0;
+    display: grid;
+    grid-template-columns: 236px minmax(0, 1fr) 216px;
+    gap: 64px;
+    align-items: start;
+  }
+  main {
+    min-width: 0;
+  }
+  article {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .breadcrumb {
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    color: var(--color-text-sub);
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  .breadcrumb a {
+    color: var(--color-text-sub);
+    text-decoration: none;
+  }
+  .article-header {
+    margin-top: 36px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .article-title {
+    margin: 0;
+    font-family: var(--font-mincho);
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 1.6;
+    letter-spacing: 0.05em;
+  }
+  .ornament {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .line {
+    width: 56px;
+    height: 1px;
+    background: var(--color-brand);
+  }
+  .toc-inline {
+    display: none;
+    margin-top: 32px;
+    padding: 16px 20px;
+    border: 1px solid var(--color-border);
+    background: var(--color-surface);
+    font-size: 14px;
+  }
+  .toc-inline summary {
+    cursor: pointer;
+    font-family: var(--font-mincho);
+    font-weight: 500;
+    letter-spacing: 0.1em;
+  }
+  .toc-inline ol {
+    list-style: none;
+    margin: 12px 0 0;
+    padding: 0;
+    line-height: 1.7;
+  }
+  .toc-inline a {
+    display: block;
+    padding: 6px 0;
+    text-decoration: none;
+  }
+  .prose {
+    margin-top: 48px;
+  }
+  @media (max-width: 1100px) {
+    .layout {
+      grid-template-columns: minmax(0, 1fr);
+    }
+    .toc-inline {
+      display: block;
+    }
+  }
+  @media (max-width: 760px) {
+    .article-title {
+      font-size: 27px;
+    }
+  }
+</style>
