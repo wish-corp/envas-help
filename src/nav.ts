@@ -14,6 +14,7 @@ export const NAV: readonly string[] = [
   'storage-extension',
   'seating-chart-publish',
   'opening-movie',
+  'profile-movie',
   'opening-movie-isum',
   'faq',
 ];
