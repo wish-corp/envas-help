@@ -16,5 +16,6 @@ export const NAV: readonly string[] = [
   'opening-movie',
   'profile-movie',
   'opening-movie-isum',
+  'guest-photo-sharing',
   'faq',
 ];
