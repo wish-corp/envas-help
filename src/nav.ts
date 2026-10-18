@@ -18,5 +18,6 @@ export const NAV: readonly string[] = [
   'opening-movie-isum',
   'guest-photo-sharing',
   'guest-photo-slideshow',
+  'bundle',
   'faq',
 ];
