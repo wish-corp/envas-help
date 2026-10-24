@@ -21,6 +21,8 @@ envas へのログインは Google ログイン、または LINE ログインに
 envas の動作推奨環境は Windows, Mac の Google Chrome ブラウザです。
 その他の環境では動作不良を起こす可能性がございます。あらかじめご了承くださいませ。
 
+![PC の Google Chrome で開いた席次表エディタ](./images/seating-chart/editor-pc.png)
+
 ## ご利用料金
 
 | ご利用内容 | 料金 | 備考 |
@@ -55,7 +57,11 @@ envas の動作推奨環境は Windows, Mac の Google Chrome ブラウザです
 ご購入後のキャンセルは原則お受けしておりません。あらかじめご了承くださいませ。
 ただし、エスコートカードの不備など、デジタルコンテンツ以外の不備についてはご連絡いただければ対応いたします。
 
+![envas のトップページの料金表。単品とセットの料金が並ぶ](./images/index/lp-pricing.jpg)
+
 ## モバイルアプリ
 
 iOS / Android 向けのモバイルアプリはありません。
 すべてウェブブラウザで完結します。
+
+![スマートフォンのブラウザで開いたダッシュボード](./images/index/dashboard-mobile.png)
