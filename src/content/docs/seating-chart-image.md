@@ -26,6 +26,8 @@ title: "席次表画像のダウンロード"
 
 選び方は[表示設定を変える](/seating-chart/#display-settings)をご覧ください。ゲストの名前の並び方は[ゲストの配置を選ぶ](/seating-chart/#guest-arrangement)で説明しています。
 
+![席次表エディタの「表示設定」。ここで選んだ見た目が画像に使われる](./images/seating-chart/settings-modal.png)
+
 ---
 
 ## 3. プレビューを確認する {#preview}
@@ -34,6 +36,8 @@ title: "席次表画像のダウンロード"
 
 - プレビュー画像をタップすると、拡大表示で細部を確認できます
 - テーブルが多く横幅に収まらない場合は、自動的に縮小されてすべてのテーブルが画像内に収まります
+
+![プレビュー画像をタップして拡大表示したところ](./images/seating-chart-image/zoom.png)
 
 ---
 

@@ -107,3 +107,5 @@ title: "プロフィールブックのテーマ"
 ## 6. テーマを変更する {#change-theme}
 
 作成途中でもテーマを変更できます。ご自身で入力した文章は引き継がれます。テーマの初期文言のままの欄は、切り替え先の初期文言に変わる場合があります。`wa-tate` では見出しや料理・飲み物の例文が和風になり、挙式日の初期表示は漢数字になります。`letter` では、タイトル・ごあいさつ・皆様へのメッセージの見出しの初期文言が、それぞれ「Wedding」「Dear guests」「With gratitude」になります。`editorial` では、タイトルが「Wedding」、ニックネームが「Tatsuya」「&」「Maki」、ごあいさつ・お料理・お飲み物・皆様へのメッセージの見出しが「Thanks for coming」「Food menu」「Drink menu」「Dear guests」になります。`retro` には専用の初期文言が無く、`simple` と同じ初期文言になります。
+
+![編集画面の上部のテーマを選ぶ欄。作成の途中でも切り替えられる](./images/profile-book-themes/theme-select.png)
