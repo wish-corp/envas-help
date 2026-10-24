@@ -12,6 +12,8 @@ envas を退会する手順と、退会したあとのデータの扱いにつ�
 2. ページ下部の「退会」から「退会する」を押します
 3. 注意事項をご確認のうえ、確認画面で「退会する」を押します
 
+![サイドバーの「基本情報設定」から開く設定画面。上から挙式情報、データ保管手数料、LINE 連携が並び、いちばん下に「退会」がある](./images/withdrawal/settings-top.png)
+
 ![設定画面の下部にある「退会」の欄と「退会する」ボタン](./images/withdrawal/settings-withdraw.png)
 
 ![「退会確認」の画面。退会後の扱いの注意事項と「退会する」ボタンが並ぶ](./images/withdrawal/withdraw-dialog.png)
