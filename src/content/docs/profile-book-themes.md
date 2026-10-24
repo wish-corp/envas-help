@@ -8,7 +8,9 @@ title: "プロフィールブックのテーマ"
 
 ## 1. テーマを選ぶ {#select-theme}
 
-プロフィールブックの編集画面を開き、画面上部のデザイン選択欄からお好みのテーマを選んでください。プレビューで見た目を確認できます。
+サイドメニューの「席次表＆プロフィールブック」からプロフィールブックの編集画面を開き、画面上部のデザイン選択欄からお好みのテーマを選んでください。右下の目のボタンでプレビューに切り替えると、ゲストが見るのと同じ見た目を確認できます。
+
+![編集画面の上部。左から戻るボタン、テーマを選ぶ欄、「初期化」ボタンが並ぶ](./images/profile-book-themes/theme-select.png)
 
 | テーマ | 特徴 |
 |---|---|
@@ -22,6 +24,18 @@ title: "プロフィールブックのテーマ"
 | `editorial` | 白地に黒の文字と朱色の差し色で組んだ、雑誌の誌面のようなテーマ |
 | `retro` | クリーム色の地に朱・青緑・辛子色と太い輪郭線で組んだ、レトロでポップなテーマ |
 
+下の画像は、同じ写真と文章でテーマを切り替え、スマートフォンでプレビューしたときの冒頭です。
+
+![simple のテーマ](./images/profile-book-themes/theme-simple.jpg)
+
+![cool のテーマ](./images/profile-book-themes/theme-cool.jpg)
+
+![stylish のテーマ](./images/profile-book-themes/theme-stylish.jpg)
+
+![game のテーマ](./images/profile-book-themes/theme-game.jpg)
+
+![wa のテーマ](./images/profile-book-themes/theme-wa.jpg)
+
 プロフィールブックの中の席次表は、プロフィールブックのテーマではなく、席次表エディタの表示設定で選んだテーマで表示されます。`wa` や `wa-tate` には、席次表のテーマ「水引」がよく合います。選び方は[席次表のテーマを選ぶ](/seating-chart/#select-theme)をご覧ください。
 
 ---
@@ -31,6 +45,8 @@ title: "プロフィールブックのテーマ"
 `wa-tate` は、本文を右から左へ読み進めるテーマです。スマートフォンでは画面を左右にスワイプし、PC ではマウスホイールを下へ回すと先へ進めます。席次表は横書きのまま表示されます。
 
 `wa` と `wa-tate` は、配色・背景・装飾を共有しています。横書きと縦書きの見え方をプレビューで比べてお選びください。
+
+![wa-tate のテーマ。表紙の写真の左に「結婚披露宴」の題字と挙式日、お二人のお名前が縦書きで並ぶ](./images/profile-book-themes/theme-wa-tate-text.jpg)
 
 ---
 
@@ -46,6 +62,8 @@ title: "プロフィールブックのテーマ"
 封筒の「To our dear guests」「PAR AVION」「from」や、「About us」「Bon appétit!」などの英字は飾りのため、編集できません。
 
 写真を登録していないあいだは、`simple` と同じ見本の写真が表示されます。
+
+![letter のテーマ。エアメールの封筒の下に、マスキングテープで留めた写真が並ぶ](./images/profile-book-themes/theme-letter.jpg)
 
 ---
 
@@ -64,6 +82,8 @@ title: "プロフィールブックのテーマ"
 
 写真を登録していないあいだは、`simple` と同じ見本の写真が表示されます。
 
+![editorial のテーマ。表紙の写真の下に、タイトル、挙式日、もくじが並ぶ](./images/profile-book-themes/theme-editorial.jpg)
+
 ---
 
 ## 5. レトロなポップのテーマを使う {#retro}
@@ -80,8 +100,12 @@ title: "プロフィールブックのテーマ"
 
 写真を登録していないあいだは、`simple` と同じ見本の写真が表示されます。
 
+![retro のテーマ。アーチ形の写真の下に、影付きの「WEDDING」と丸いバッジの挙式日が並ぶ](./images/profile-book-themes/theme-retro.jpg)
+
 ---
 
 ## 6. テーマを変更する {#change-theme}
 
 作成途中でもテーマを変更できます。ご自身で入力した文章は引き継がれます。テーマの初期文言のままの欄は、切り替え先の初期文言に変わる場合があります。`wa-tate` では見出しや料理・飲み物の例文が和風になり、挙式日の初期表示は漢数字になります。`letter` では、タイトル・ごあいさつ・皆様へのメッセージの見出しの初期文言が、それぞれ「Wedding」「Dear guests」「With gratitude」になります。`editorial` では、タイトルが「Wedding」、ニックネームが「Tatsuya」「&」「Maki」、ごあいさつ・お料理・お飲み物・皆様へのメッセージの見出しが「Thanks for coming」「Food menu」「Drink menu」「Dear guests」になります。`retro` には専用の初期文言が無く、`simple` と同じ初期文言になります。
+
+![編集画面の上部のテーマを選ぶ欄。作成の途中でも切り替えられる](./images/profile-book-themes/theme-select.png)

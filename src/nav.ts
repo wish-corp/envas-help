@@ -5,6 +5,7 @@ export const NAV: readonly string[] = [
   'profile-book-themes',
   'publish',
   'photo-gallery',
+  'album',
   'seating-chart-image',
   'after-party',
   'transaction-history',
