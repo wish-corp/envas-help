@@ -72,6 +72,12 @@ id はそのまま URL のアンカー（`/guest/#import-guests-csv`）になり
 
 動画のファイルは `public/movies/` に置きます。1 ファイル 100 MB 未満にしてください。
 
+操作を見せる数秒の動画は、`loop` を付けると音を消して自動で繰り返し流します。音のある動画には付けないでください。
+
+```md
+::video{src="/movies/seating-chart/move-table.v1.mp4" loop}
+```
+
 ### 画像
 
 ```md

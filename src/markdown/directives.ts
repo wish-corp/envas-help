@@ -59,6 +59,8 @@ function transformMedia(node: LeafDirective, file: VFile) {
   if (node.name === 'video') {
     const src = node.attributes?.src ?? '';
     if (!src.startsWith(LOCAL_VIDEO_PREFIX)) file.fail(`動画は ${LOCAL_VIDEO_PREFIX} 配下に置いてください: ${src}`, node);
+    // 自動で流すには音を消す必要がある。音のある動画に loop を付けないこと
+    const loop = node.attributes?.loop !== undefined && node.attributes?.loop !== null;
     node.data = {
       hName: 'figure',
       hProperties: { className: ['media'] },
@@ -66,7 +68,9 @@ function transformMedia(node: LeafDirective, file: VFile) {
         {
           type: 'element',
           tagName: 'video',
-          properties: { src, controls: true, preload: 'metadata', playsInline: true },
+          properties: loop
+            ? { src, controls: true, preload: 'metadata', playsInline: true, autoPlay: true, muted: true, loop: true }
+            : { src, controls: true, preload: 'metadata', playsInline: true },
           children: [],
         },
         ...figcaption(caption),
