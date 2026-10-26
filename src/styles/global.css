@@ -245,8 +245,11 @@ input::placeholder {
   letter-spacing: 0.06em;
 }
 
+/* 縦長のスマートフォンの画面と横長の PC の画面の両方を載せるので、幅ではなく高さで抑える */
 .prose figure.media video {
-  max-width: 360px;
+  width: auto;
+  max-width: 100%;
+  max-height: min(640px, 80vh);
   height: auto;
   aspect-ratio: auto;
   margin: 0 auto;
