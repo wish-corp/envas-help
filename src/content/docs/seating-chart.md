@@ -77,6 +77,8 @@ title: "席次表の使い方"
 
 ::video[テーブルをドラッグして、方眼に沿って動かす]{src="/movies/seating-chart/move-table.v1.mp4" loop}
 
+::video[スマートフォンでテーブルを長押しして動かす]{src="/movies/seating-chart/move-table-mobile.v1.mp4" loop}
+
 ![「テーブルを動かす」を選ぶと出る矢印のボタン。「完了」で終える](./images/seating-chart/move-pad.png)
 
 新郎新婦のお名前や挙式日などの見出しも、同じように動かせます。
