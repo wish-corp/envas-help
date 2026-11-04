@@ -20,5 +20,6 @@ export const NAV: readonly string[] = [
   'guest-photo-sharing',
   'guest-photo-slideshow',
   'bundle',
+  'welcome-board',
   'faq',
 ];
