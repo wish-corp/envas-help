@@ -21,5 +21,6 @@ export const NAV: readonly string[] = [
   'guest-photo-slideshow',
   'bundle',
   'welcome-board',
+  'profile-book-video',
   'faq',
 ];
