@@ -15,16 +15,16 @@ title: "席次表の使い方"
 
 - テーブルは方眼の上に並びます。方眼は編集中だけ表示され、ダウンロードする画像と公開ページには出ません
 - 左上に、まだ席に座っていないゲストの人数（「未配席 3名」など）が表示されます。全員が座ると「全員配席済み」に変わります
-- 右上の 3 つのボタンで、拡大・縮小と全体の表示ができます
-- 右下の「？」をタップすると、操作の動画が付いた使い方が開きます
+- 右下に横に並ぶ 3 つのボタンで、拡大・縮小と全体の表示ができます
+- その右隣の「？」をタップすると、操作の動画が付いた使い方が開きます
 
-![PC の席次表エディタ。方眼の上にテーブルが並び、左上に未配席の人数が表示される](./images/seating-chart/editor-pc.png)
+![PC の席次表エディタ。方眼の上にテーブルが並び、左上に未配席の人数、右下に拡大・縮小のボタンと「？」が表示される](./images/seating-chart/editor-pc.png)
 
-![スマートフォンの席次表エディタ。テーブルが画面いっぱいに表示される](./images/seating-chart/editor-mobile.png)
+![スマートフォンの席次表エディタ。右下に拡大・縮小のボタンと「？」が並ぶ](./images/seating-chart/editor-mobile.png)
 
 スマートフォンでは、空席をタップしてゲストを選び、テーブルは長押しして動かします。
 
-::video[スマートフォンで空席にゲストを座らせ、テーブルを長押しして動かす]{src="/movies/seating-chart/mobile.v1.mp4" loop}
+::video[スマートフォンで空席にゲストを座らせ、テーブルを長押しして動かす]{src="/movies/seating-chart/mobile.v2.mp4" loop}
 
 ### 操作ガイド {#operation-guide}
 
@@ -37,10 +37,11 @@ title: "席次表の使い方"
 
 ### 拡大・縮小する {#zoom}
 
-- 右上に縦に並ぶボタンのうち、上の 2 つで拡大・縮小し、3 つ目で全体を表示します
+- 右下に横に並ぶボタンのうち、左の 2 つで拡大・縮小し、3 つ目で全体を表示します
 - スマートフォンでは、2 本の指で広げたり縮めたりもできます
+- スマートフォンでテーブルを動かす矢印のボタンを出している間は、拡大・縮小のボタンが隠れます。2 本の指で広げたり縮めたりしてください
 
-::video[右上のボタンで拡大・縮小し、全体を表示する]{src="/movies/seating-chart/zoom.v1.mp4" loop}
+::video[右下のボタンで拡大・縮小し、全体を表示する]{src="/movies/seating-chart/zoom.v2.mp4" loop}
 
 ### 使い方を見る {#help-button}
 
@@ -65,7 +66,7 @@ title: "席次表の使い方"
 
 ![「テーブル追加」の画面。テーブル名と形状を入れて「追加」をタップする](./images/seating-chart/add-table-dialog.png)
 
-::video[「＋卓を追加」でテーブルを足す]{src="/movies/seating-chart/add-table.v1.mp4" loop}
+::video[「＋卓を追加」でテーブルを足す]{src="/movies/seating-chart/add-table.v2.mp4" loop}
 
 ### テーブルを動かす {#move-table}
 
@@ -75,9 +76,9 @@ title: "席次表の使い方"
 - **スマートフォン**: テーブルを長押しすると色が変わります。そのまま指を動かすと、テーブルが付いてきます。長押しせずに指を動かすと、画面がスクロールします
 - **矢印のボタンで動かす**: テーブルをタップしてメニューの「テーブルを動かす」を選ぶと、矢印のボタンが出ます。矢印で 1 マスずつ動かし、「完了」で終えます
 
-::video[テーブルをドラッグして、方眼に沿って動かす]{src="/movies/seating-chart/move-table.v1.mp4" loop}
+::video[テーブルをドラッグして、方眼に沿って動かす]{src="/movies/seating-chart/move-table.v2.mp4" loop}
 
-::video[スマートフォンでテーブルを長押しして動かす]{src="/movies/seating-chart/move-table-mobile.v1.mp4" loop}
+::video[スマートフォンでテーブルを長押しして動かす]{src="/movies/seating-chart/move-table-mobile.v2.mp4" loop}
 
 ![「テーブルを動かす」を選ぶと出る矢印のボタン。「完了」で終える](./images/seating-chart/move-pad.png)
 
@@ -119,7 +120,7 @@ title: "席次表の使い方"
 
 ゲストは、空席かテーブルから開く「ゲストを追加」の画面で座らせます。登録済みのゲストを選ぶことも、その場で新しく登録することもできます。
 
-::video[テーブルのメニューの「ゲストを追加」から、名前で探して座らせる]{src="/movies/seating-chart/guest-picker.v1.mp4" loop}
+::video[テーブルのメニューの「ゲストを追加」から、名前で探して座らせる]{src="/movies/seating-chart/guest-picker.v2.mp4" loop}
 
 ### 空席やテーブルからゲストを選ぶ {#assign-unassigned}
 
@@ -156,7 +157,7 @@ title: "席次表の使い方"
    - **空席**: その空席に移ります
    - **テーブル**: そのテーブルの最後に移ります
 
-::video[ゲストをタップしてから、別のゲストやテーブルをタップして入れ替える]{src="/movies/seating-chart/swap-guests.v1.mp4" loop}
+::video[ゲストをタップしてから、別のゲストやテーブルをタップして入れ替える]{src="/movies/seating-chart/swap-guests.v2.mp4" loop}
 
 ![「江口 拓也」をタップして選んだ状態。続けて入れ替え先のゲストや空席、テーブルをタップする](./images/seating-chart/guest-selected.png)
 
