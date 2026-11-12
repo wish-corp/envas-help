@@ -3,6 +3,7 @@ export const NAV: readonly string[] = [
   'guest',
   'seating-chart',
   'profile-book-themes',
+  'profile-book-writing',
   'publish',
   'photo-gallery',
   'album',
