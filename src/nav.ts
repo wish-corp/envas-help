@@ -1,5 +1,6 @@
 export const NAV: readonly string[] = [
   'index',
+  'ai-onboarding',
   'guest',
   'seating-chart',
   'profile-book-themes',
